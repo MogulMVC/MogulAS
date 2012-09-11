@@ -13,7 +13,6 @@ package util
 		
 		public static function linear_regression(x:Array, y:Array):Array
 		{
-			
 			// calculate number points
 			var n:uint = x.length;
 			
@@ -51,7 +50,6 @@ package util
 			
 			// return result
 			return [m,b];
-			
 		}
 	}
 }
