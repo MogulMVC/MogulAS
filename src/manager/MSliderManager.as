@@ -69,11 +69,6 @@ package manager
 			}
 		}
 		
-		public function getPercent():Number
-		{
-			return _percent;
-		}
-		
 		public function setPercent(value:Number):void
 		{
 			if(value >= 0 && value <= 1)
@@ -85,9 +80,9 @@ package manager
 			}
 		}
 		
-		public function getValue():Number
+		public function getPercent():Number
 		{
-			return getPercent() * (_rangeMax - _rangeMin) + _rangeMin;
+			return _percent;
 		}
 		
 		public function setValue(value:Number):void
@@ -98,7 +93,12 @@ package manager
 			}
 		}
 		
-		public function range(valueMin:Number, valueMax:Number):void
+		public function getValue():Number
+		{
+			return getPercent() * (_rangeMax - _rangeMin) + _rangeMin;
+		}
+		
+		public function setRange(valueMin:Number, valueMax:Number):void
 		{
 			_rangeMin = valueMin;
 			_rangeMax = valueMax;

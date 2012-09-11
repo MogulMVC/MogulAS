@@ -88,15 +88,15 @@ package ui
 			_ld.width = _setWidth;
 		}
 		
-		public function resetHeight():void
-		{
-			_setHeight = _defaultHeight;
-			resize();
-		}
-		
 		public function resetWidth():void
 		{
 			_setWidth = _defaultWidth;
+			resize();
+		}
+		
+		public function resetHeight():void
+		{
+			_setHeight = _defaultHeight;
 			resize();
 		}
 		
@@ -104,17 +104,6 @@ package ui
 		{
 			_keepAspect = value;
 			resize();
-		}
-		
-		override public function set height(value:Number):void
-		{
-			_setHeight = value;
-			resize();
-		}
-		
-		override public function get height():Number
-		{
-			return _setHeight;
 		}
 		
 		override public function set width(value:Number):void
@@ -127,7 +116,17 @@ package ui
 		{
 			return _setWidth;
 		}
-
+		
+		override public function set height(value:Number):void
+		{
+			_setHeight = value;
+			resize();
+		}
+		
+		override public function get height():Number
+		{
+			return _setHeight;
+		}
 		
 	}
 }

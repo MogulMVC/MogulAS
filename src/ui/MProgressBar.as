@@ -23,7 +23,7 @@ package ui
 			this.progressFG.width = progressWidth;
 		}
 		
-		public function setLength(value:Number):void
+		public function setWidth(value:Number):void
 		{
 			this.progressBG.width = value;
 			this.progressBG.height = _heightDefault;

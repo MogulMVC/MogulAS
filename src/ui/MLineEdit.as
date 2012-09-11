@@ -13,7 +13,7 @@ package ui
 	{
 		private var _prompt:String = "";
 		
-		public function MLineEdit()
+		public function MLineEdit(prompt:String = "")
 		{
 			super();
 			
@@ -27,7 +27,7 @@ package ui
 			
 			this.defaultTextFormat = inputFormat;
 			
-			this.text = "";
+			this.text = prompt;
 			
 			this.background = true;
 			this.backgroundColor = 0xffffff;

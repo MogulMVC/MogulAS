@@ -21,7 +21,7 @@ package manager
 			_glow.alpha = 0;
 			_glow.blurX = 10;
 			_glow.blurY = 10;
-			_glow.quality = BitmapFilterQuality.LOW;
+			_glow.quality = BitmapFilterQuality.MEDIUM;
 		}
 		
 		public function setup(item:DisplayObject):void
