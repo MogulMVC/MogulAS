@@ -2,7 +2,7 @@ package ui
 {
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
-
+	
 	public class MHBoxLayout extends Sprite
 	{
 		private var _children:Array;
@@ -16,10 +16,8 @@ package ui
 		
 		public function setPadding(value:Number):void
 		{
-			if(value > 0 && value < 100)
-			{
-				_padding = 	value;
-			}
+			_padding = 	value;
+			updateUI();
 		}
 		
 		override public function addChild(child:DisplayObject):DisplayObject
