@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="ui.MSlider"/>
+    <classEntry path="manager.MSliderManager"/>
+    <classEntry path="util.MTime"/>
+    <classEntry path="util.MTemperature"/>
+    <classEntry path="util.MColor"/>
+    <classEntry path="ui.MLineEdit"/>
+    <classEntry path="manager.MGlowManager"/>
+    <classEntry path="util.MMath"/>
+    <classEntry path="ui.MProgressBar"/>
+    <classEntry path="config.MConfig"/>
+    <classEntry path="ui.MTab"/>
+    <classEntry path="ui.MTip"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
