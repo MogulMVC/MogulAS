@@ -1,7 +1,18 @@
 package config
 {
+	import flash.text.TextFormat;
+
 	public class MConfig
 	{
+		//Color
+		
+		public static var mono_1:uint = 0x0a0a0a;
+		public static var mono_2:uint = 0x323232;
+		public static var mono_3:uint = 0x646464;
+		public static var mono_4:uint = 0x969696;
+		public static var mono_5:uint = 0xe6e6e6;
+		public static var mono_6:uint = 0xffffff;
+		
 		public static var red_1:uint = 0x960000;
 		public static var red_2:uint = 0xfa0000;
 		public static var red_3:uint = 0xf07373;
@@ -32,13 +43,56 @@ package config
 		public static var violet_3:uint = 0xb273f0;
 		public static var violet_4:uint = 0x4a0c89;
 		
-		public static var mono_1:uint = 0x0a0a0a;
-		public static var mono_2:uint = 0x323232;
-		public static var mono_3:uint = 0x646464;
-		public static var mono_4:uint = 0x969696;
-		public static var mono_5:uint = 0xe6e6e6;
-		public static var mono_6:uint = 0xffffff;
+		public static var outline:uint = mono_3;
 		
+		//Visuals
+		
+		public static var rounded:uint = 6;
+		
+		//Font / Text
+		
+		public static var font:String = "Arial";
+		
+		public static var textFormatDefault:TextFormat = new TextFormat();
+		textFormatDefault.color = mono_1;
+		textFormatDefault.font = font;
+		textFormatDefault.size = 14;
+		
+		public static var textFormatRed:TextFormat = new TextFormat();
+		textFormatRed.color = red_1;
+		textFormatRed.font = font;
+		textFormatRed.size = 14;
+		
+		public static var textFormatOrange:TextFormat = new TextFormat();
+		textFormatOrange.color = orange_1;
+		textFormatOrange.font = font;
+		textFormatOrange.size = 14;
+		
+		public static var textFormatYellow:TextFormat = new TextFormat();
+		textFormatYellow.color = yellow_1;
+		textFormatYellow.font = font;
+		textFormatYellow.size = 14;
+		
+		public static var textFormatGreen:TextFormat = new TextFormat();
+		textFormatGreen.color = green_1;
+		textFormatGreen.font = font;
+		textFormatGreen.size = 14;
+		
+		public static var textFormatBlue:TextFormat = new TextFormat();
+		textFormatBlue.color = blue_1;
+		textFormatBlue.font = font;
+		textFormatBlue.size = 14;
+		
+		public static var textFormatViolet:TextFormat = new TextFormat();
+		textFormatViolet.color = violet_1;
+		textFormatViolet.font = font;
+		textFormatViolet.size = 14;
+		
+		public static var textFormatWhite:TextFormat = new TextFormat();
+		textFormatWhite.color = mono_6;
+		textFormatWhite.font = font;
+		textFormatWhite.size = 14;
+			
 		public function MConfig()
 		{
 		}

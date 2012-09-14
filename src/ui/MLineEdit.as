@@ -1,5 +1,7 @@
 package ui
 {
+	import config.MConfig;
+	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.filters.DropShadowFilter;
@@ -8,6 +10,8 @@ package ui
 	import flash.text.TextFormat;
 	
 	import manager.MGlowManager;
+	
+	import util.MColor;
 	
 	public class MLineEdit extends TextField
 	{
@@ -21,23 +25,21 @@ package ui
 			var glow:MGlowManager = new MGlowManager();
 			glow.setup(this);
 			
-			var inputFormat:TextFormat = new TextFormat(); 
-			inputFormat.font = "Arial";
-			inputFormat.size = 14;
+			var inputFormat:TextFormat = MConfig.textFormatDefault; 
 			
 			this.defaultTextFormat = inputFormat;
 			
 			this.text = prompt;
 			
 			this.background = true;
-			this.backgroundColor = 0xffffff;
+			this.backgroundColor = MConfig.mono_6;
 			
 			this.type = TextFieldType.INPUT;
 			
 			this.height = 24;
 			
 			this.border = true;
-			this.borderColor = 0x646464;
+			this.borderColor = MConfig.outline;
 			
 			this.addEventListener(MouseEvent.CLICK, promptClear);
 		}

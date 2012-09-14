@@ -13,6 +13,12 @@
     <classEntry path="config.MConfig"/>
     <classEntry path="ui.MTab"/>
     <classEntry path="ui.MTip"/>
+    <classEntry path="manager.MDraggableManager"/>
+    <classEntry path="ui.MHeader"/>
+    <classEntry path="ui.MSidebar"/>
+    <classEntry path="manager.MShadowManager"/>
+    <classEntry path="ui.MButton"/>
+    <classEntry path="ui.MSystemMessage"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
