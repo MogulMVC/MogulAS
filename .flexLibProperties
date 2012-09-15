@@ -19,6 +19,7 @@
     <classEntry path="manager.MShadowManager"/>
     <classEntry path="ui.MButton"/>
     <classEntry path="ui.MSystemMessage"/>
+    <classEntry path="ui.MModal"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

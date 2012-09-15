@@ -166,10 +166,12 @@ package ui
 			_labelField.text = value;
 			_labelField.x = _labelPadding;
 			
-			_width = _labelField.getLineMetrics(0).width;
-			drawBackground(null);
+			//This breaks the width
+			//I will fix it later
+			//_width = _labelField.getLineMetrics(0).width;
 			
-			trace("Width " + _width);
+			drawBackground(null);
+			setLabelColor();
 		}
 		
 		private function setLabelColor():void

@@ -1,14 +1,22 @@
 package ui
 {
+	import flash.display.BitmapData;
 	import flash.display.Loader;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
+	import flash.events.MouseEvent;
 	import flash.events.SecurityErrorEvent;
 	import flash.net.URLRequest;
 	
 	public class MImage extends Sprite
 	{
+		public static const PIXEL_SELECTED:String = "pixelSelected";
+		
+		private var _loaded:Boolean = false;
+		
+		private var _pixel:uint;
+		
 		private var _src:String;
 		private var _ld:Loader;
 		
@@ -21,11 +29,14 @@ package ui
 		private var _setWidth:Number;
 		private var _setHeight:Number;
 		
+		private var _bitmapData:BitmapData;
+		
 		public function MImage()
 		{
 			super();
 			_ld = new Loader();
 			this.addChild(_ld);
+			this.addEventListener(MouseEvent.MOUSE_DOWN, selectPixel);
 		}
 		
 		public function setSrc(value:String):void
@@ -46,6 +57,10 @@ package ui
 		
 		private function display(event:Event):void
 		{
+			_loaded = true;
+			
+			_bitmapData = event.target.content.bitmapData;
+			
 			_defaultWidth = event.target.content.width;
 			_defaultHeight = event.target.content.height;
 			
@@ -70,6 +85,15 @@ package ui
 		private function errorSecurity(event:SecurityErrorEvent):void
 		{
 			trace("error - security");
+		}
+		
+		private function selectPixel(event:MouseEvent):void
+		{
+			if(_loaded)
+			{
+				_pixel = _bitmapData.getPixel(event.localX, event.localY);
+				dispatchEvent(new Event(PIXEL_SELECTED));
+			}
 		}
 		
 		private function resize():void
@@ -106,6 +130,11 @@ package ui
 			resize();
 		}
 		
+		public function getPixel():uint
+		{
+			return _pixel;
+		}
+		
 		override public function set width(value:Number):void
 		{
 			_setWidth = value;
@@ -127,6 +156,5 @@ package ui
 		{
 			return _setHeight;
 		}
-		
 	}
 }
