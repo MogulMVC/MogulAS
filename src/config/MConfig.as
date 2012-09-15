@@ -7,9 +7,12 @@ package config
 		//Color
 		
 		public static var mono_1:uint = 0x0a0a0a;
+		public static var mono_1_2:uint = 0x141414; /* Will Fix Later */
+		public static var mono_1_3:uint = 0x232323; /* Will Fix Later */
 		public static var mono_2:uint = 0x323232;
 		public static var mono_3:uint = 0x646464;
 		public static var mono_4:uint = 0x969696;
+		public static var mono_4_2:uint = 0xc8c8c8; /* Will Fix Later */
 		public static var mono_5:uint = 0xe6e6e6;
 		public static var mono_6:uint = 0xffffff;
 		
@@ -24,7 +27,7 @@ package config
 		public static var orange_4:uint = 0x8c4110;
 		
 		public static var yellow_1:uint = 0x969600;
-		public static var yellow_2:uint = 0xfafa00;
+		public static var yellow_2:uint = 0xfafa00; //Change to #fac800 after redesign
 		public static var yellow_3:uint = 0xf0f073;
 		public static var yellow_4:uint = 0x8b8b0e;
 		
@@ -47,7 +50,7 @@ package config
 		
 		//Visuals
 		
-		public static var rounded:uint = 6;
+		public static var rounded:uint = 6; //Double size of CSS
 		
 		//Font / Text
 		
