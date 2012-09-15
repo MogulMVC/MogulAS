@@ -47,14 +47,21 @@ package config
 		public static var violet_4:uint = 0x4a0c89;
 		
 		public static var outline:uint = mono_3;
+		public static var outline_down:uint = mono_2;
 		
 		//Visuals
 		
 		public static var rounded:uint = 6; //Double size of CSS
+		public static var rounded_large:uint = 20; 
 		
 		//Font / Text
 		
 		public static var font:String = "Arial";
+		
+		public static var textFormatBold:TextFormat = new TextFormat();
+		textFormatBold.color = mono_1;
+		textFormatBold.font = font;
+		textFormatBold.size = 14;
 		
 		public static var textFormatDefault:TextFormat = new TextFormat();
 		textFormatDefault.color = mono_1;
@@ -90,6 +97,11 @@ package config
 		textFormatViolet.color = violet_1;
 		textFormatViolet.font = font;
 		textFormatViolet.size = 14;
+		
+		public static var textFormatBlack:TextFormat = new TextFormat();
+		textFormatBlack.color = mono_1;
+		textFormatBlack.font = font;
+		textFormatBlack.size = 14;
 		
 		public static var textFormatWhite:TextFormat = new TextFormat();
 		textFormatWhite.color = mono_6;
