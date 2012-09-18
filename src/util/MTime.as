@@ -8,21 +8,10 @@ package util
 		
 		public static function sec2hms(sec:int):String 
 		{
-			// start with a blank string
 			var hms:String = '';
-			
-			// do the hours first: there are 3600 seconds in an hour, so if we divide
-			// the total number of seconds by 3600 and throw away the remainder, we're
-			// left with the number of hours in those seconds
+
 			var hours:int = int(sec / 3600); 
-			
-			// dividing the total seconds by 60 will give us the number of minutes
-			// in total, but we're interested in *minutes past the hour* and to get
-			// this, we have to divide by 60 again and then use the remainder
 			var minutes:int = int(sec / 60) % 60; 
-			
-			// seconds past the minute are found by dividing the total number of seconds
-			// by 60 and using the remainder
 			var seconds:int = int(sec % 60); 
 			
 			//Padding
