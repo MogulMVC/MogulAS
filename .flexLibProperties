@@ -6,7 +6,7 @@
     <classEntry path="util.MTime"/>
     <classEntry path="util.MTemperature"/>
     <classEntry path="util.MColor"/>
-    <classEntry path="ui.MLineEdit"/>
+    <classEntry path="ui.MInputText"/>
     <classEntry path="manager.MGlowManager"/>
     <classEntry path="util.MMath"/>
     <classEntry path="ui.MProgressBar"/>

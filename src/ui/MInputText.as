@@ -13,11 +13,11 @@ package ui
 	
 	import util.MColor;
 	
-	public class MLineEdit extends TextField
+	public class MInputText extends TextField
 	{
 		private var _prompt:String = "";
 		
-		public function MLineEdit(prompt:String = "")
+		public function MInputText(prompt:String = "")
 		{
 			super();
 			
@@ -41,10 +41,10 @@ package ui
 			this.border = true;
 			this.borderColor = MConfig.outline;
 			
-			this.addEventListener(MouseEvent.CLICK, promptClear);
+			this.addEventListener(MouseEvent.CLICK, clearPrompt);
 		}
 		
-		private function promptClear(event:Event):void
+		private function clearPrompt(event:Event):void
 		{
 			if(this.text == _prompt)
 			{
