@@ -6,12 +6,13 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>com.aptana.projects.webnature</nature>
+		<nature>com.adobe.flexbuilder.project.flexlibnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
 	</natures>
 </projectDescription>
