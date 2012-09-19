@@ -4,6 +4,13 @@ package config
 
 	public class MConfig
 	{
+		//Speed
+		
+		/* Needs Matching */
+		public static var speedFast:uint = 125;
+		public static var speedNorm:uint = 250;
+		public static var speedSlow:unit = 500; 
+	
 		//Color
 		
 		public static var mono_1:uint = 0x0a0a0a;
@@ -49,7 +56,7 @@ package config
 		public static var outline:uint = mono_3;
 		public static var outline_down:uint = mono_2;
 		
-		//Visuals
+		//Visual
 		
 		public static var rounded:uint = 6; //Double size of CSS
 		public static var rounded_large:uint = 20; 

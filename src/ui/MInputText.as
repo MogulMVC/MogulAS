@@ -13,11 +13,11 @@ package ui
 	
 	import util.MColor;
 	
-	public class MLineEdit extends TextField
+	public class MInputText extends TextField
 	{
 		private var _prompt:String = "";
 		
-		public function MLineEdit(prompt:String = "")
+		public function MInputText(prompt:String = "")
 		{
 			super();
 			
