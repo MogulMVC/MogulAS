@@ -41,10 +41,10 @@ package ui
 			this.border = true;
 			this.borderColor = MConfig.outline;
 			
-			this.addEventListener(MouseEvent.CLICK, promptClear);
+			this.addEventListener(MouseEvent.CLICK, clearPrompt);
 		}
 		
-		private function promptClear(event:Event):void
+		private function clearPrompt(event:Event):void
 		{
 			if(this.text == _prompt)
 			{
