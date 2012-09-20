@@ -59,9 +59,7 @@ package ui
 			this.graphics.drawRect(0, 0, stage.stageWidth, _setHeight);
 			this.graphics.endFill();
 			
-			trace("Stage Width " + stage.stageWidth, "This Width " + this.width);
-			
-			staticHeight = this.height;
+			staticHeight = _setHeight;
 		}
 		
 	}

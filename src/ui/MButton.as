@@ -106,6 +106,64 @@ package ui
 			setLabelPosition();
 		}
 		
+		//Colors
+		
+		public function setMono():void
+		{
+			_colorNormal = _monoNormal;
+			_labelColor = MConfig.mono_1;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
+		public function setRed():void
+		{
+			_colorNormal = _redNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
+		public function setOrange():void
+		{
+			_colorNormal = _orangeNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
+		public function setYellow():void
+		{
+			_colorNormal = _yellowNormal;
+			_labelColor = MConfig.mono_1;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
+		public function setGreen():void
+		{
+			_colorNormal = _greenNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
+		public function setBlue():void
+		{
+			_colorNormal = _blueNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
+		public function setViolet():void
+		{
+			_colorNormal = _violetNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			setLabelColor();
+		}
+		
 		//Padding
 		
 		public function setPadding(value:Number):void
