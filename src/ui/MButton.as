@@ -55,7 +55,7 @@ package ui
 			addChild(_labelField);
 			
 			setLabel(value);
-			setLabelColor();
+			labelColor();
 			
 			addEventListener(Event.ADDED_TO_STAGE, stageAdded);
 		}
@@ -91,7 +91,7 @@ package ui
 			this.graphics.lineStyle(1, MConfig.outline, 1, true);
 			this.graphics.beginGradientFill(GradientType.LINEAR, _colorNormal, [1, 1], [0, 255], matrix, SpreadMethod.PAD);
 			this.graphics.drawRoundRect(0, 0, _width, _height, MConfig.rounded);
-			setLabelPosition();
+			labelPosition();
 		}
 		
 		private function drawBackgroundDown(event:MouseEvent):void
@@ -103,65 +103,37 @@ package ui
 			this.graphics.lineStyle(1, MConfig.outline, 1, true);
 			this.graphics.beginGradientFill(GradientType.LINEAR, _colorDown, [1, 1], [0, 255], matrix, SpreadMethod.PAD);
 			this.graphics.drawRoundRect(0, 0, _width, _height, MConfig.rounded);
-			setLabelPosition();
+			labelPosition();
 		}
 		
-		//Colors
+		//Label
 		
-		public function setMono():void
+		public function setLabel(value:String):void
 		{
-			_colorNormal = _monoNormal;
-			_labelColor = MConfig.mono_1;
-			drawBackground(null);
-			setLabelColor();
+			_labelValue = value;
+			
+			_labelField.text = value;
+			
+			labelColor();
+			
+			//This breaks the width
+			//I will fix it later
+			this.width = _labelField.width + _padding * 2;
 		}
 		
-		public function setRed():void
+		private function labelColor():void
 		{
-			_colorNormal = _redNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			setLabelColor();
+			var format:TextFormat = MConfig.textFormatDefault;
+			format.color = _labelColor;
+			format.bold = true;
+			
+			_labelField.setTextFormat(format);
 		}
 		
-		public function setOrange():void
+		private function labelPosition():void
 		{
-			_colorNormal = _orangeNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			setLabelColor();
-		}
-		
-		public function setYellow():void
-		{
-			_colorNormal = _yellowNormal;
-			_labelColor = MConfig.mono_1;
-			drawBackground(null);
-			setLabelColor();
-		}
-		
-		public function setGreen():void
-		{
-			_colorNormal = _greenNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			setLabelColor();
-		}
-		
-		public function setBlue():void
-		{
-			_colorNormal = _blueNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			setLabelColor();
-		}
-		
-		public function setViolet():void
-		{
-			_colorNormal = _violetNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			setLabelColor();
+			_labelField.x = (_width / 2) - (_labelField.width / 2);
+			_labelField.y = (_height / 2) - (_labelField.height / 2);
 		}
 		
 		//Padding
@@ -172,34 +144,62 @@ package ui
 			drawBackground(null);
 		}
 		
-		//Work with Label
+		//Colors
 		
-		public function setLabel(value:String):void
+		public function setMono():void
 		{
-			_labelValue = value;
-			
-			_labelField.text = value;
-			
-			setLabelColor();
-			
-			//This breaks the width
-			//I will fix it later
-			this.width = _labelField.width + _padding * 2;
+			_colorNormal = _monoNormal;
+			_labelColor = MConfig.mono_1;
+			drawBackground(null);
+			labelColor();
 		}
 		
-		private function setLabelColor():void
+		public function setRed():void
 		{
-			var format:TextFormat = MConfig.textFormatDefault;
-			format.color = _labelColor;
-			format.bold = true;
-			
-			_labelField.setTextFormat(format);
+			_colorNormal = _redNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			labelColor();
 		}
 		
-		private function setLabelPosition():void
+		public function setOrange():void
 		{
-			_labelField.x = (_width / 2) - (_labelField.width / 2);
-			_labelField.y = (_height / 2) - (_labelField.height / 2);
+			_colorNormal = _orangeNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			labelColor();
+		}
+		
+		public function setYellow():void
+		{
+			_colorNormal = _yellowNormal;
+			_labelColor = MConfig.mono_1;
+			drawBackground(null);
+			labelColor();
+		}
+		
+		public function setGreen():void
+		{
+			_colorNormal = _greenNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			labelColor();
+		}
+		
+		public function setBlue():void
+		{
+			_colorNormal = _blueNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			labelColor();
+		}
+		
+		public function setViolet():void
+		{
+			_colorNormal = _violetNormal;
+			_labelColor = MConfig.mono_6;
+			drawBackground(null);
+			labelColor();
 		}
 		
 		//Overrides

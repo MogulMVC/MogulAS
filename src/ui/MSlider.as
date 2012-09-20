@@ -35,13 +35,7 @@ package ui
 			var updateEvent:Event = new Event(Event.CHANGE);
 			dispatchEvent(updateEvent);
 		}
-		
-		public function setWidth(value:Number):void
-		{
-			this.track.width = value;
-			this.track.height = _heightDefault;
-		}
-		
+	
 		public function setPercent(value:Number):void
 		{
 			_manager.setPercent(value);
@@ -66,6 +60,13 @@ package ui
 		{
 			_manager.setRange(valueMin, valueMax);
 		}
+		
+		override public function width(value:Number):void
+		{
+			this.track.width = value;
+			this.track.height = _heightDefault;
+		}
+		
 		
 	}
 }

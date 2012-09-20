@@ -60,14 +60,31 @@ package ui
 			setLabelPosition();
 		}
 		
+		private function drawDropdown(event:MouseEvent):void
+		{
+		
+		}
+		
+		private function undrawDropdown(event:MouseEvent):void
+		{
+		
+		}
+		
 		public function addChoice(key:String, value:Object):void
 		{
-		var new choice:Object = {"key": key, "value": value};
+		var new choice:Object = new Object();
+		choice.key = key;
+		choice.value = value;
 		_choices.push(choice);
 		}
 		
 		public function setSelectionIndex(index:uint):void
 		{
+		}
+		
+		public function getSelectionIndex(index:uint):Object
+		{
+		return _choices[index];
 		}
 	}
 }
