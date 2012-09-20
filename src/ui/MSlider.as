@@ -61,7 +61,7 @@ package ui
 			_manager.setRange(valueMin, valueMax);
 		}
 		
-		override public function width(value:Number):void
+		override public function set width(value:Number):void
 		{
 			this.track.width = value;
 			this.track.height = _heightDefault;

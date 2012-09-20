@@ -16,8 +16,6 @@ package ui
 	import manager.MDraggableManager;
 	import manager.MShadowManager;
 	
-	import mx.states.AddChild;
-	
 	public class MSystemMessage extends Sprite
 	{
 		private var _width:Number = 450;

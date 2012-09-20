@@ -1,17 +1,27 @@
 package ui
 {
+	import config.MConfig;
+	
+	import flash.display.GradientType;
+	import flash.display.SpreadMethod;
 	import flash.display.Sprite;
-
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.geom.Matrix;
+	
 	public class MComboBox extends Sprite
 	{
+		private var _width:Number = 0;
+		private var _height:Number = 0;
+		
+		private var _colorNormal:Array = [MConfig.mono_5, MConfig.mono_4];
+		private var _colorDown:Array = [MConfig.mono_2, MConfig.mono_2];
+		
 		private var _choices:Array;
-	
+		
 		public function MComboBox()
 		{
-		
-		
-		_choices = [];
-		
+			_choices = [];
 		}
 		
 		private function stageAdded(event:Event):void
@@ -60,22 +70,28 @@ package ui
 			setLabelPosition();
 		}
 		
+		private function setLabelPosition():void
+		{
+			// TODO Auto Generated method stub
+			
+		}
+		
 		private function drawDropdown(event:MouseEvent):void
 		{
-		
+			
 		}
 		
 		private function undrawDropdown(event:MouseEvent):void
 		{
-		
+			
 		}
 		
 		public function addChoice(key:String, value:Object):void
 		{
-		var new choice:Object = new Object();
-		choice.key = key;
-		choice.value = value;
-		_choices.push(choice);
+			var choice:Object = new Object();
+			choice.key = key;
+			choice.value = value;
+			_choices.push(choice);
 		}
 		
 		public function setSelectionIndex(index:uint):void
@@ -84,7 +100,7 @@ package ui
 		
 		public function getSelectionIndex(index:uint):Object
 		{
-		return _choices[index];
+			return _choices[index];
 		}
 	}
 }

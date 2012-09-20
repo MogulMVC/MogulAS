@@ -2,20 +2,16 @@ package ui
 {
 	public class MTab
 	{
-	
-	private var _tabs:Array;
-	
+		
+		private var _tabs:Array;
+		
 		public function MTab()
 		{
-		
-		_tabs = [];
+			_tabs = [];
 		}
 		
 		public function addTab(tab:String):void
 		{
-		
-
-		
 		}
 		
 		public function setSelectionIndex(index:uint):void
@@ -24,7 +20,7 @@ package ui
 		
 		public function getSelectionIndex(index:uint):Object
 		{
-		return _choices[index];
+			return _tabs[index];
 		}
 	}
 }

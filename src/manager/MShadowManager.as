@@ -1,11 +1,8 @@
 package manager
 {
-	import config.MConfig;
-	
 	import flash.display.DisplayObject;
 	import flash.filters.BitmapFilterQuality;
 	import flash.filters.DropShadowFilter;
-	import flash.filters.GlowFilter;
 
 	public class MShadowManager
 	{
