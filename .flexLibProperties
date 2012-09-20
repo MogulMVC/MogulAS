@@ -20,6 +20,7 @@
     <classEntry path="ui.MButton"/>
     <classEntry path="ui.MSystemMessage"/>
     <classEntry path="ui.MModal"/>
+    <classEntry path="ui.MPagination"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

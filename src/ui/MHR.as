@@ -1,6 +1,8 @@
 package ui
 {
-	public class MHR
+	import flash.display.Sprite;
+
+	public class MHR extends Sprite
 	{
 		public function MHR()
 		{

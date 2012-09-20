@@ -1,6 +1,8 @@
 package ui
 {
-	public class MComboBox
+	import flash.display.Sprite;
+
+	public class MComboBox extends Sprite
 	{
 		public function MComboBox()
 		{

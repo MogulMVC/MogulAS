@@ -1,6 +1,8 @@
 package ui
 {
-	public class MList
+	import flash.display.Sprite;
+
+	public class MList extends Sprite
 	{
 		public function MList()
 		{

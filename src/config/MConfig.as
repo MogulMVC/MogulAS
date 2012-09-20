@@ -9,7 +9,7 @@ package config
 		/* Needs Matching */
 		public static var speedFast:uint = 125;
 		public static var speedNorm:uint = 250;
-		public static var speedSlow:unit = 500; 
+		public static var speedSlow:uint = 500; 
 	
 		//Color
 		
@@ -63,7 +63,7 @@ package config
 		
 		//Font / Text
 		
-		public static var font:String = "Arial";
+		public static var font:String = "Verdana";
 		
 		public static var textFormatBold:TextFormat = new TextFormat();
 		textFormatBold.color = mono_1;

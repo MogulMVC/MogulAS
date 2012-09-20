@@ -1,6 +1,8 @@
 package ui
 {
-	public class MGroupBox
+	import flash.display.Sprite;
+
+	public class MGroupBox extends Sprite
 	{
 		public function MGroupBox()
 		{

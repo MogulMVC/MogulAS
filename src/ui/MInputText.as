@@ -4,14 +4,11 @@ package ui
 	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.filters.DropShadowFilter;
 	import flash.text.TextField;
 	import flash.text.TextFieldType;
 	import flash.text.TextFormat;
 	
 	import manager.MGlowManager;
-	
-	import util.MColor;
 	
 	public class MInputText extends TextField
 	{
