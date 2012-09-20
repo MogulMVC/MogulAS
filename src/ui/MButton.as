@@ -90,7 +90,7 @@ package ui
 			this.graphics.clear();
 			this.graphics.lineStyle(1, MConfig.outline, 1, true);
 			this.graphics.beginGradientFill(GradientType.LINEAR, _colorNormal, [1, 1], [0, 255], matrix, SpreadMethod.PAD);
-			this.graphics.drawRoundRect(0, 0, _labelField.width, _height, MConfig.rounded);
+			this.graphics.drawRoundRect(0, 0, _width, _height, MConfig.rounded);
 			setLabelPosition();
 		}
 		
@@ -102,7 +102,7 @@ package ui
 			this.graphics.clear();
 			this.graphics.lineStyle(1, MConfig.outline, 1, true);
 			this.graphics.beginGradientFill(GradientType.LINEAR, _colorDown, [1, 1], [0, 255], matrix, SpreadMethod.PAD);
-			this.graphics.drawRoundRect(0, 0, _labelField.width, _height, MConfig.rounded);
+			this.graphics.drawRoundRect(0, 0, _width, _height, MConfig.rounded);
 			setLabelPosition();
 		}
 		
@@ -122,18 +122,11 @@ package ui
 			
 			_labelField.text = value;
 			
+			setLabelColor();
+			
 			//This breaks the width
 			//I will fix it later
-			width = _labelField.width + _padding * 2;
-			//width = _labelField.textWidth + _padding * 2;
-			
-			trace(_labelField.width, _labelField.textWidth);
-			
-			//Redraw background
-			drawBackground(null);
-			
-			//Redraw color
-			setLabelColor();
+			this.width = _labelField.width + _padding * 2;
 		}
 		
 		private function setLabelColor():void
@@ -148,7 +141,7 @@ package ui
 		private function setLabelPosition():void
 		{
 			_labelField.x = (_width / 2) - (_labelField.width / 2);
-			//_labelField.y = _height / 2;
+			_labelField.y = (_height / 2) - (_labelField.height / 2);
 		}
 		
 		//Overrides
