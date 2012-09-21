@@ -65,11 +65,6 @@ package config
 		
 		public static var font:String = "Verdana";
 		
-		public static var textFormatBold:TextFormat = new TextFormat();
-		textFormatBold.color = mono_1;
-		textFormatBold.font = font;
-		textFormatBold.size = 14;
-		
 		public static var textFormatDefault:TextFormat = new TextFormat();
 		textFormatDefault.color = mono_1;
 		textFormatDefault.font = font;
