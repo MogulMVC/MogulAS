@@ -5,7 +5,7 @@ package ui
 		private var _heightDefault:Number;
 		private var _widthDefault:Number;
 		
-		private var _value:Number;
+		private var _percent:Number;
 		
 		public function MProgressBar()
 		{
@@ -18,7 +18,7 @@ package ui
 		private function updateUI():void
 		{
 			var totalWidth:Number = this.width;
-			var progressWidth:Number = totalWidth * _value;
+			var progressWidth:Number = totalWidth * _percent;
 			
 			this.progressFG.width = progressWidth;
 		}
@@ -29,15 +29,15 @@ package ui
 			this.progressBG.height = _heightDefault;
 		}
 		
-		public function setValue(value:Number):void
+		public function setPercent(value:Number):void
 		{
-			_value = value;
+			_percent = value;
 			updateUI();
 		}
 		
-		public function getValue():Number
+		public function getPercent():Number
 		{
-			return _value;
+			return _percent;
 		}
 	}
 }

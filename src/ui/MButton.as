@@ -110,15 +110,11 @@ package ui
 		
 		public function setLabel(value:String):void
 		{
-			_labelValue = value;
+			_labelField.text = _labelValue = value;
 			
-			_labelField.text = value;
+			this.width = _labelField.width + _padding * 2;
 			
 			labelColor();
-			
-			//This breaks the width
-			//I will fix it later
-			this.width = _labelField.width + _padding * 2;
 		}
 		
 		private function labelColor():void
