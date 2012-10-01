@@ -1,9 +1,3 @@
-The library is broken into multiple packages.
+Mogul AS is an ActionScript library that attempts to stay stylistically consistent with Mogul CSS, Mogul JS, and Mogul MVC.
 
-config holds global AS variable files.
-
-manager is a collection of classes used to apply properties to other classes.
-
-ui holds all visible UI elements.
-
-util holds public static functions with no UI component.
+Built with Flash Builder 4.5.
