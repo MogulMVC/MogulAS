@@ -132,68 +132,41 @@ package ui
 			_labelField.y = (_height / 2) - (_labelField.height / 2);
 		}
 		
-		//Padding
-		
-		public function setPadding(value:Number):void
-		{
-			_padding = 	value;
-			drawBackground(null);
-		}
-		
 		//Colors
 		
-		public function setMono():void
+		public function setColor(color:String = ''):void
 		{
-			_colorNormal = _monoNormal;
-			_labelColor = MConfig.mono_1;
-			drawBackground(null);
-			labelColor();
-		}
-		
-		public function setRed():void
-		{
-			_colorNormal = _redNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			labelColor();
-		}
-		
-		public function setOrange():void
-		{
-			_colorNormal = _orangeNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			labelColor();
-		}
-		
-		public function setYellow():void
-		{
-			_colorNormal = _yellowNormal;
-			_labelColor = MConfig.mono_1;
-			drawBackground(null);
-			labelColor();
-		}
-		
-		public function setGreen():void
-		{
-			_colorNormal = _greenNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			labelColor();
-		}
-		
-		public function setBlue():void
-		{
-			_colorNormal = _blueNormal;
-			_labelColor = MConfig.mono_6;
-			drawBackground(null);
-			labelColor();
-		}
-		
-		public function setViolet():void
-		{
-			_colorNormal = _violetNormal;
-			_labelColor = MConfig.mono_6;
+			color = color.toLowerCase();
+			
+			if(color == ''){
+				_colorNormal = _monoNormal;
+				_labelColor = MConfig.mono_1;
+			}
+			else if(color == 'r' || color == 'red'){
+				_colorNormal = _redNormal;
+				_labelColor = MConfig.mono_6;
+			}
+			else if(color == 'o' || color == 'orange'){
+				_colorNormal = _orangeNormal;
+				_labelColor = MConfig.mono_6;
+			}
+			else if(color == 'y' || color == 'yellow'){
+				_colorNormal = _yellowNormal;
+				_labelColor = MConfig.mono_1;
+			}
+			else if(color == 'g' || color == 'green'){
+				_colorNormal = _greenNormal;
+				_labelColor = MConfig.mono_6;
+			}
+			else if(color == 'b' || color == 'blue'){
+				_colorNormal = _blueNormal;
+				_labelColor = MConfig.mono_6;
+			}
+			else if(color == 'v' || color == 'violet'){
+				_colorNormal = _violetNormal;
+				_labelColor = MConfig.mono_6;
+			}
+			
 			drawBackground(null);
 			labelColor();
 		}

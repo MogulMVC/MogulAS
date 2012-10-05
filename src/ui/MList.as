@@ -20,8 +20,11 @@ package ui
 		
 		public function MList()
 		{
+			super();
+			
 			_listItems = [];
 			_listRows = [];
+			
 			drawSelf();
 		}
 		

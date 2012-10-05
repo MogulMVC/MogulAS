@@ -34,8 +34,10 @@ package ui
 		public function MImage()
 		{
 			super();
+			
 			_ld = new Loader();
 			this.addChild(_ld);
+			
 			this.addEventListener(MouseEvent.MOUSE_DOWN, selectPixel);
 		}
 		
