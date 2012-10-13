@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="ui.MSlider"/>
-    <classEntry path="manager.MSliderManager"/>
-    <classEntry path="util.MTime"/>
-    <classEntry path="util.MTemperature"/>
-    <classEntry path="util.MColor"/>
-    <classEntry path="ui.MInputText"/>
-    <classEntry path="manager.MGlowManager"/>
-    <classEntry path="util.MMath"/>
-    <classEntry path="ui.MProgressBar"/>
-    <classEntry path="config.MConfig"/>
-    <classEntry path="ui.MTab"/>
-    <classEntry path="ui.MTip"/>
-    <classEntry path="manager.MDraggableManager"/>
-    <classEntry path="ui.MHeader"/>
-    <classEntry path="ui.MSidebar"/>
-    <classEntry path="manager.MShadowManager"/>
-    <classEntry path="ui.MButton"/>
-    <classEntry path="ui.MSystemMessage"/>
-    <classEntry path="ui.MModal"/>
-    <classEntry path="ui.MPagination"/>
+    <classEntry path="com.mogulas.ui.MSlider"/>
+    <classEntry path="com.mogulas.manager.MSliderManager"/>
+    <classEntry path="com.mogulas.util.MTime"/>
+    <classEntry path="com.mogulas.util.MTemperature"/>
+    <classEntry path="com.mogulas.util.MColor"/>
+    <classEntry path="com.mogulas.ui.MInputText"/>
+    <classEntry path="com.mogulas.manager.MGlowManager"/>
+    <classEntry path="com.mogulas.util.MMath"/>
+    <classEntry path="com.mogulas.ui.MProgressBar"/>
+    <classEntry path="com.mogulas.config.MConfig"/>
+    <classEntry path="com.mogulas.ui.MTab"/>
+    <classEntry path="com.mogulas.ui.MTip"/>
+    <classEntry path="com.mogulas.manager.MDraggableManager"/>
+    <classEntry path="com.mogulas.ui.MHeader"/>
+    <classEntry path="com.mogulas.ui.MSidebar"/>
+    <classEntry path="com.mogulas.manager.MShadowManager"/>
+    <classEntry path="com.mogulas.ui.MButton"/>
+    <classEntry path="com.mogulas.ui.MSystemMessage"/>
+    <classEntry path="com.mogulas.ui.MModal"/>
+    <classEntry path="com.mogulas.ui.MPagination"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
