@@ -113,10 +113,10 @@ package com.mogulas.ui
 		public function setLabel(value:String):void
 		{
 			_labelField.text = _labelValue = value;
+			labelColor();
 			
 			this.width = _labelField.width + _padding * 2;
 			
-			labelColor();
 		}
 		
 		private function labelColor():void
