@@ -16,7 +16,7 @@ package com.mogulas.ui
 	
 	public class MButton extends Sprite
 	{
-		private var _padding:Number = 10;
+		private var _padding:Number = 5;
 		
 		private var _width:Number = 60;
 		private var _height:Number = 20;

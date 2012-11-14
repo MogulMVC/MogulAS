@@ -68,47 +68,47 @@ package com.mogulas.config
 		public static var textFormatDefault:TextFormat = new TextFormat();
 		textFormatDefault.color = mono_1;
 		textFormatDefault.font = font;
-		textFormatDefault.size = 14;
+		textFormatDefault.size = 12;
 		
 		public static var textFormatRed:TextFormat = new TextFormat();
 		textFormatRed.color = red_1;
 		textFormatRed.font = font;
-		textFormatRed.size = 14;
+		textFormatRed.size = 12;
 		
 		public static var textFormatOrange:TextFormat = new TextFormat();
 		textFormatOrange.color = orange_1;
 		textFormatOrange.font = font;
-		textFormatOrange.size = 14;
+		textFormatOrange.size = 12;
 		
 		public static var textFormatYellow:TextFormat = new TextFormat();
 		textFormatYellow.color = yellow_1;
 		textFormatYellow.font = font;
-		textFormatYellow.size = 14;
+		textFormatYellow.size = 12;
 		
 		public static var textFormatGreen:TextFormat = new TextFormat();
 		textFormatGreen.color = green_1;
 		textFormatGreen.font = font;
-		textFormatGreen.size = 14;
+		textFormatGreen.size = 12;
 		
 		public static var textFormatBlue:TextFormat = new TextFormat();
 		textFormatBlue.color = blue_1;
 		textFormatBlue.font = font;
-		textFormatBlue.size = 14;
+		textFormatBlue.size = 12;
 		
 		public static var textFormatViolet:TextFormat = new TextFormat();
 		textFormatViolet.color = violet_1;
 		textFormatViolet.font = font;
-		textFormatViolet.size = 14;
+		textFormatViolet.size = 12;
 		
 		public static var textFormatBlack:TextFormat = new TextFormat();
 		textFormatBlack.color = mono_1;
 		textFormatBlack.font = font;
-		textFormatBlack.size = 14;
+		textFormatBlack.size = 12;
 		
 		public static var textFormatWhite:TextFormat = new TextFormat();
 		textFormatWhite.color = mono_6;
 		textFormatWhite.font = font;
-		textFormatWhite.size = 14;
+		textFormatWhite.size = 12;
 			
 		public function MConfig()
 		{
