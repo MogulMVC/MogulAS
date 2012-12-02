@@ -1,8 +1,8 @@
 package com.mogulas.ui
 {
-	public class MToolbar
+	public class MToolBar
 	{
-		public function MToolbar()
+		public function MToolBar()
 		{
 		}
 	}

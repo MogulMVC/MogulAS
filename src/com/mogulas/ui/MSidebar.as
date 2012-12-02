@@ -7,11 +7,11 @@ package com.mogulas.ui
 	
 	import com.mogulas.manager.MShadowManager;
 	
-	public class MSidebar extends Sprite
+	public class MSideBar extends Sprite
 	{
 		private var _setWidth:Number = 300;
 		
-		public function MSidebar()
+		public function MSideBar()
 		{
 			super();
 			
