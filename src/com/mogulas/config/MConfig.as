@@ -1,9 +1,16 @@
+/* 
+* Mogul AS by Alan James
+* version 130220
+*/
+
 package com.mogulas.config
 {
 	import flash.text.TextFormat;
 
 	public class MConfig
 	{
+		public static var version:String = "130220";
+		
 		//Speed
 		
 		/* Needs Matching */
