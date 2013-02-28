@@ -20,6 +20,8 @@
     <classEntry path="com.mogulas.ui.MButton"/>
     <classEntry path="com.mogulas.ui.MSystemMessage"/>
     <classEntry path="com.mogulas.ui.MModal"/>
+    <classEntry path="com.mogulas.util.MKeyboard"/>
+    <classEntry path="com.mogulas.util.MValidate"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
