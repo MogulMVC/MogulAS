@@ -1,6 +1,6 @@
 /* 
 * Mogul AS by Alan James
-* version 130228
+* version 130303
 */
 
 package com.mogulas.config
@@ -9,7 +9,7 @@ package com.mogulas.config
 
 	public class MConfig
 	{
-		public static var version:String = "130228";
+		public static var version:String = "130303";
 		
 		//Speed
 		

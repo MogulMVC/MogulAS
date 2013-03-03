@@ -1,5 +1,6 @@
 package com.mogulas.ui
 {
+	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Loader;
 	import flash.display.Sprite;
@@ -11,6 +12,7 @@ package com.mogulas.ui
 	
 	public class MImage extends Sprite
 	{
+		public static const LOADED:String = "loaded";
 		public static const PIXEL_SELECTED:String = "pixelSelected";
 		
 		private var _loaded:Boolean = false;
@@ -29,6 +31,7 @@ package com.mogulas.ui
 		private var _setWidth:Number;
 		private var _setHeight:Number;
 		
+		private var _bitmap:Bitmap;
 		private var _bitmapData:BitmapData;
 		
 		public function MImage()
@@ -61,6 +64,7 @@ package com.mogulas.ui
 		{
 			_loaded = true;
 			
+			_bitmap = event.target.content;
 			_bitmapData = event.target.content.bitmapData;
 			
 			_defaultWidth = event.target.content.width;
@@ -77,6 +81,8 @@ package com.mogulas.ui
 			}
 			
 			resize();
+			
+			dispatchEvent(new Event(LOADED));
 		}
 		
 		private function errorIO(event:IOErrorEvent):void
@@ -130,6 +136,11 @@ package com.mogulas.ui
 		{
 			_keepAspect = value;
 			resize();
+		}
+		
+		public function getBitmap():Bitmap
+		{
+			return _bitmap;
 		}
 		
 		public function getPixel():uint
