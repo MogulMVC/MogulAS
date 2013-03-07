@@ -1,6 +1,8 @@
 package com.mogulas.ui
 {
 	import com.mogulas.config.MConfig;
+	import com.mogulas.manager.MDraggableManager;
+	import com.mogulas.manager.MShadowManager;
 	
 	import flash.display.GradientType;
 	import flash.display.SpreadMethod;
@@ -12,9 +14,6 @@ package com.mogulas.ui
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
 	import flash.utils.Timer;
-	
-	import com.mogulas.manager.MDraggableManager;
-	import com.mogulas.manager.MShadowManager;
 	
 	public class MSystemMessage extends Sprite
 	{
@@ -62,7 +61,7 @@ package com.mogulas.ui
 			addEventListener(Event.ENTER_FRAME, fadeOut);
 		}
 		
-		protected function fadeOut(event:Event):void
+		private function fadeOut(event:Event):void
 		{
 			this.alpha -= .05;
 			

@@ -1,11 +1,10 @@
 package com.mogulas.ui
 {
 	import com.mogulas.config.MConfig;
+	import com.mogulas.manager.MShadowManager;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
-	
-	import com.mogulas.manager.MShadowManager;
 	
 	public class MSideBar extends Sprite
 	{

@@ -11,8 +11,6 @@
     <classEntry path="com.mogulas.util.MMath"/>
     <classEntry path="com.mogulas.ui.MProgressBar"/>
     <classEntry path="com.mogulas.config.MConfig"/>
-    <classEntry path="com.mogulas.ui.MTab"/>
-    <classEntry path="com.mogulas.ui.MTip"/>
     <classEntry path="com.mogulas.manager.MDraggableManager"/>
     <classEntry path="com.mogulas.ui.MHeader"/>
     <classEntry path="com.mogulas.ui.MSideBar"/>

@@ -1,6 +1,7 @@
 package com.mogulas.ui
 {
 	import com.mogulas.config.MConfig;
+	import com.mogulas.manager.MGlowManager;
 	
 	import flash.display.GradientType;
 	import flash.display.SpreadMethod;
@@ -11,8 +12,6 @@ package com.mogulas.ui
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
-	
-	import com.mogulas.manager.MGlowManager;
 	
 	public class MButton extends Sprite
 	{
@@ -29,7 +28,7 @@ package com.mogulas.ui
 		private var _blueNormal:Array = [MConfig.blue_2, MConfig.blue_1];
 		private var _violetNormal:Array = [MConfig.violet_2, MConfig.violet_1];
 		
-		//The default colors
+		// The default colors
 		private var _colorNormal:Array = _monoNormal;
 		private var _colorDown:Array = [MConfig.mono_2, MConfig.mono_2];
 		
@@ -57,32 +56,34 @@ package com.mogulas.ui
 			setLabel(value);
 			labelColor();
 			
-			addEventListener(Event.ADDED_TO_STAGE, stageAdded);
+			addEventListener(Event.ADDED_TO_STAGE, onStageAdded);
 		}
 		
-		private function stageAdded(event:Event):void
+		// Events
+		
+		private function onStageAdded(event:Event):void
 		{
-			drawBackground(null);
+			onDrawBackgroundUp(null);
 			
-			removeEventListener(Event.ADDED_TO_STAGE, stageAdded);
-			addEventListener(Event.REMOVED_FROM_STAGE, stageRemove);
+			removeEventListener(Event.ADDED_TO_STAGE, onStageAdded);
+			addEventListener(Event.REMOVED_FROM_STAGE, onStageRemove);
 			
-			//Add mouse events
-			addEventListener(MouseEvent.MOUSE_DOWN, drawBackgroundDown);
-			stage.addEventListener(MouseEvent.MOUSE_UP, drawBackground);
+			// Add mouse events
+			addEventListener(MouseEvent.MOUSE_DOWN, onDrawBackgroundDown);
+			stage.addEventListener(MouseEvent.MOUSE_UP, onDrawBackgroundUp);
 		}		
 		
-		private function stageRemove(event:Event):void
+		private function onStageRemove(event:Event):void
 		{
-			addEventListener(Event.ADDED_TO_STAGE, stageAdded);
-			removeEventListener(Event.REMOVED_FROM_STAGE, stageRemove);
+			addEventListener(Event.ADDED_TO_STAGE, onStageAdded);
+			removeEventListener(Event.REMOVED_FROM_STAGE, onStageRemove);
 			
-			//Remove mouse events
-			removeEventListener(MouseEvent.MOUSE_DOWN, drawBackgroundDown);
-			stage.removeEventListener(MouseEvent.MOUSE_UP, drawBackground);
+			// Remove mouse events
+			removeEventListener(MouseEvent.MOUSE_DOWN, onDrawBackgroundDown);
+			stage.removeEventListener(MouseEvent.MOUSE_UP, onDrawBackgroundUp);
 		}
 		
-		private function drawBackground(event:MouseEvent):void
+		private function onDrawBackgroundUp(event:MouseEvent):void
 		{
 			var matrix:Matrix = new Matrix();
 			matrix.createGradientBox(_width, _height, (Math.PI/180)*90, 0, 1);
@@ -95,7 +96,7 @@ package com.mogulas.ui
 			labelPosition();
 		}
 		
-		private function drawBackgroundDown(event:MouseEvent):void
+		private function onDrawBackgroundDown(event:MouseEvent):void
 		{
 			var matrix:Matrix = new Matrix();
 			matrix.createGradientBox(_width, _height, (Math.PI/180)*90, 0, 1);
@@ -108,16 +109,7 @@ package com.mogulas.ui
 			labelPosition();
 		}
 		
-		//Label
-		
-		public function setLabel(value:String):void
-		{
-			_labelField.text = _labelValue = value;
-			labelColor();
-			
-			this.width = _labelField.width + _padding * 2;
-			
-		}
+		// Label
 		
 		private function labelColor():void
 		{
@@ -134,57 +126,73 @@ package com.mogulas.ui
 			_labelField.y = (_height / 2) - (_labelField.height / 2);
 		}
 		
-		//Colors
+		public function setLabel(value:String):void
+		{
+			_labelField.text = _labelValue = value;
+			labelColor();
+			
+			this.width = _labelField.width + _padding * 2;
+			
+		}
+		
+		// Colors
 		
 		public function setColor(color:String = ''):void
 		{
 			color = color.toLowerCase();
 			
-			if(color == ''){
+			if(color == '')
+			{
 				_colorNormal = _monoNormal;
 				_labelColor = MConfig.mono_1;
 			}
-			else if(color == 'r' || color == 'red'){
+			else if(color == 'r' || color == 'red')
+			{
 				_colorNormal = _redNormal;
 				_labelColor = MConfig.mono_6;
 			}
-			else if(color == 'o' || color == 'orange'){
+			else if(color == 'o' || color == 'orange')
+			{
 				_colorNormal = _orangeNormal;
 				_labelColor = MConfig.mono_6;
 			}
-			else if(color == 'y' || color == 'yellow'){
+			else if(color == 'y' || color == 'yellow')
+			{
 				_colorNormal = _yellowNormal;
 				_labelColor = MConfig.mono_1;
 			}
-			else if(color == 'g' || color == 'green'){
+			else if(color == 'g' || color == 'green')
+			{
 				_colorNormal = _greenNormal;
 				_labelColor = MConfig.mono_6;
 			}
-			else if(color == 'b' || color == 'blue'){
+			else if(color == 'b' || color == 'blue')
+			{
 				_colorNormal = _blueNormal;
 				_labelColor = MConfig.mono_6;
 			}
-			else if(color == 'v' || color == 'violet'){
+			else if(color == 'v' || color == 'violet')
+			{
 				_colorNormal = _violetNormal;
 				_labelColor = MConfig.mono_6;
 			}
 			
-			drawBackground(null);
+			onDrawBackgroundUp(null);
 			labelColor();
 		}
 		
-		//Overrides
+		// Overrides
 		
 		override public function set width(value:Number):void
 		{
 			_width = value;
-			drawBackground(null);
+			onDrawBackgroundUp(null);
 		}
 		
 		override public function set height(value:Number):void
 		{
 			_height = value;
-			drawBackground(null);
+			onDrawBackgroundUp(null);
 		}
 		
 	}

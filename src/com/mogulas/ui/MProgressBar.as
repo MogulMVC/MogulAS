@@ -15,7 +15,7 @@ package com.mogulas.ui
 			_widthDefault = this.progressBG.width;
 		}
 		
-		private function updateUI():void
+		private function update():void
 		{
 			var totalWidth:Number = this.width;
 			var progressWidth:Number = totalWidth * _percent;
@@ -23,21 +23,23 @@ package com.mogulas.ui
 			this.progressFG.width = progressWidth;
 		}
 		
-		public function setWidth(value:Number):void
-		{
-			this.progressBG.width = value;
-			this.progressBG.height = _heightDefault;
-		}
-		
 		public function setPercent(value:Number):void
 		{
 			_percent = value;
-			updateUI();
+			update();
 		}
 		
 		public function getPercent():Number
 		{
 			return _percent;
+		}
+		
+		//Overrides
+		
+		override public function set width(value:Number):void
+		{
+			this.progressBG.width = value;
+			this.progressBG.height = _heightDefault;
 		}
 	}
 }

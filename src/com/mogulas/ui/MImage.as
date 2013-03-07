@@ -39,28 +39,34 @@ package com.mogulas.ui
 			super();
 			
 			_ld = new Loader();
+			_ld.contentLoaderInfo.addEventListener(Event.COMPLETE, onDisplay);
+			_ld.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, onErrorIO);
+			_ld.contentLoaderInfo.addEventListener(SecurityErrorEvent.SECURITY_ERROR, onErrorSecurity);
 			this.addChild(_ld);
 			
-			this.addEventListener(MouseEvent.MOUSE_DOWN, selectPixel);
+			this.addEventListener(MouseEvent.MOUSE_DOWN, onSelectPixel);
 		}
 		
-		public function setSrc(value:String):void
+		private function onErrorIO(event:IOErrorEvent):void
 		{
-			if(value != ""){
-				_src = value;
-				load();
+			trace("error - IO");
+		}
+		
+		private function onErrorSecurity(event:SecurityErrorEvent):void
+		{
+			trace("error - security");
+		}
+		
+		private function onSelectPixel(event:MouseEvent):void
+		{
+			if(_loaded)
+			{
+				_pixel = _bitmapData.getPixel(event.localX, event.localY);
+				dispatchEvent(new Event(PIXEL_SELECTED));
 			}
 		}
 		
-		private function load():void
-		{
-			_ld.load(new URLRequest(_src));
-			_ld.contentLoaderInfo.addEventListener(Event.COMPLETE, display);
-			_ld.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, errorIO);
-			_ld.contentLoaderInfo.addEventListener(SecurityErrorEvent.SECURITY_ERROR, errorSecurity);
-		}
-		
-		private function display(event:Event):void
+		private function onDisplay(event:Event):void
 		{
 			_loaded = true;
 			
@@ -85,25 +91,6 @@ package com.mogulas.ui
 			dispatchEvent(new Event(LOADED));
 		}
 		
-		private function errorIO(event:IOErrorEvent):void
-		{
-			trace("error - IO");
-		}
-		
-		private function errorSecurity(event:SecurityErrorEvent):void
-		{
-			trace("error - security");
-		}
-		
-		private function selectPixel(event:MouseEvent):void
-		{
-			if(_loaded)
-			{
-				_pixel = _bitmapData.getPixel(event.localX, event.localY);
-				dispatchEvent(new Event(PIXEL_SELECTED));
-			}
-		}
-		
 		private function resize():void
 		{
 			if(_keepAspect == "w" || _keepAspect == "width")
@@ -120,6 +107,15 @@ package com.mogulas.ui
 			_ld.width = _setWidth;
 		}
 		
+		public function setSrc(value:String):void
+		{
+			if(value != "")
+			{
+				_src = value;
+				_ld.load(new URLRequest(_src));
+			}
+		}
+		
 		public function resetWidth():void
 		{
 			_setWidth = _defaultWidth;
@@ -134,7 +130,13 @@ package com.mogulas.ui
 		
 		public function setKeepAspect(value:String):void
 		{
-			_keepAspect = value;
+			value = value.toLowerCase();
+			
+			if(value == "h" || value == "w")
+			{
+				_keepAspect = value;
+			}
+			
 			resize();
 		}
 		
@@ -147,6 +149,8 @@ package com.mogulas.ui
 		{
 			return _pixel;
 		}
+		
+		//Overrides
 		
 		override public function set width(value:Number):void
 		{

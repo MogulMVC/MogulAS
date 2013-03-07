@@ -1,9 +1,9 @@
 package com.mogulas.ui
 {
-	import flash.events.Event;
-	
 	import com.mogulas.manager.MGlowManager;
 	import com.mogulas.manager.MSliderManager;
+	
+	import flash.events.Event;
 	
 	public class MSlider extends MSliderBase
 	{
@@ -60,6 +60,8 @@ package com.mogulas.ui
 		{
 			_manager.setRange(valueMin, valueMax);
 		}
+		
+		//Overrides
 		
 		override public function set width(value:Number):void
 		{

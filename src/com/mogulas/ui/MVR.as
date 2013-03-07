@@ -12,6 +12,8 @@ package com.mogulas.ui
 			addEventListener(Event.ADDED_TO_STAGE, stageAdded);
 		}
 		
+		// Events
+		
 		private function stageAdded(event:Event):void
 		{
 			this.graphics.lineStyle(1,MConfig.outline,1);

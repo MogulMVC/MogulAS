@@ -14,21 +14,7 @@ package com.mogulas.ui
 			_children = [];
 		}
 		
-		public function setPadding(value:Number):void
-		{
-			_padding = 	value;
-			updateUI();
-		}
-		
-		override public function addChild(child:DisplayObject):DisplayObject
-		{
-			_children.push(child);
-			updateUI();
-			
-			return super.addChild(child);
-		}
-		
-		private function updateUI():void
+		private function update():void
 		{
 			var xPos:Number = 0;
 			for each(var child:DisplayObject in _children)
@@ -36,6 +22,22 @@ package com.mogulas.ui
 				child.x = xPos;
 				xPos += child.width + _padding;
 			}
+		}
+		
+		public function setPadding(value:Number):void
+		{
+			_padding = 	value;
+			update();
+		}
+		
+		// Overrides
+		
+		override public function addChild(child:DisplayObject):DisplayObject
+		{
+			_children.push(child);
+			update();
+			
+			return super.addChild(child);
 		}
 		
 	}

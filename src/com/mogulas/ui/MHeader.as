@@ -11,8 +11,8 @@ package com.mogulas.ui
 
 	public class MHeader extends Sprite
 	{
-		//shown tracks when the header has been added
-		//This is so other classes can listen for it and position themselves around it
+		// shown tracks when the header has been added
+		// This is so other classes can listen for it and position themselves around it
 		public static var shown:Boolean = false;
 		public static var staticHeight:Number = 0;
 		
@@ -29,6 +29,8 @@ package com.mogulas.ui
 			addEventListener(Event.ADDED_TO_STAGE, stageAdded);
 		}
 		
+		// Events
+		
 		private function stageAdded(event:Event):void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, stageAdded);
@@ -36,10 +38,10 @@ package com.mogulas.ui
 			
 			shown = true;
 			
-			stage.addEventListener(Event.RESIZE, updateUI);
+			stage.addEventListener(Event.RESIZE, update);
 			
-			//Initially resize
-			updateUI(null);
+			// Initially resize
+			update(null);
 		}		
 		
 		private function stageRemove(event:Event):void
@@ -49,12 +51,12 @@ package com.mogulas.ui
 			
 			shown = false;
 			
-			stage.removeEventListener(Event.RESIZE, updateUI);
+			stage.removeEventListener(Event.RESIZE, update);
 			
 			staticHeight = 0;
 		}
 		
-		public function updateUI(event:Event):void
+		public function update(event:Event):void
 		{
 			this.x = 0;
 			this.y = 0;

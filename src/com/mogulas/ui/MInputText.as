@@ -1,14 +1,13 @@
 package com.mogulas.ui
 {
 	import com.mogulas.config.MConfig;
+	import com.mogulas.manager.MGlowManager;
 	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import flash.text.TextFieldType;
 	import flash.text.TextFormat;
-	
-	import com.mogulas.manager.MGlowManager;
 	
 	public class MInputText extends TextField
 	{
@@ -38,10 +37,10 @@ package com.mogulas.ui
 			this.border = true;
 			this.borderColor = MConfig.outline;
 			
-			this.addEventListener(MouseEvent.CLICK, clearPrompt);
+			this.addEventListener(MouseEvent.CLICK, clearPlaceholder);
 		}
 		
-		private function clearPrompt(event:Event):void
+		private function clearPlaceholder(event:Event):void
 		{
 			if(this.text == _prompt)
 			{
@@ -49,7 +48,7 @@ package com.mogulas.ui
 			}
 		}
 		
-		public function setPrompt(value:String):void
+		public function setPlaceholder(value:String):void
 		{
 			_prompt = value;
 			this.text = _prompt;
