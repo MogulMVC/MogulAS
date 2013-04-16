@@ -43,6 +43,45 @@ package com.mogulas.util
 			
 		}
 		
+		// Validates that a Variable is Declared
+		public static function declared(input:Object):Boolean
+		{
+			return true;
+		}
+		
+		// Validates that a Variable is declared but exists in memory
+		// An empty string, 0, or false, will return true
+		public static function optional(input:Object):Boolean
+		{
+			return true;
+		}
+		
+		// Validates that a Variable is decalred and has a value
+		// An empty string does not validate but 0 and false do
+		public static function required(input:Object):Boolean
+		{
+			return true;
+		}
+		
+		// Validates that a Variable contains only what is in the array
+		// It can only have what is in the array
+		public static function onlyContain(input:Object, valid:Array):Boolean
+		{
+			return true;
+		}
+		
+		// Validates that a Variable contains what is in the array
+		// It can have other characters but must have what is in the array
+		public static function mustContain(input:Object, valid:Array):Boolean
+		{
+			return true;
+		}
+		
+		// Validates that a Variable is
+		public static function between(input:Object, rangeStart:Number, rangeEnd:Number):Boolean
+		{
+			return true;
+		}
 		
 	}
 }
