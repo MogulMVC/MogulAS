@@ -1,1 +1,12 @@
+bin/*
+!bin/.gitempty
+
+bin-debug/*
+!bin-debug/.gitempty
+
+bin-release/
+!bin-release/.gitempty
+
+.settings/
+.project
 .DS_Store
