@@ -1,3 +1,12 @@
-Mogul AS is an ActionScript library that attempts to stay stylistically consistent with Mogul CSS, Mogul JS, and Mogul MVC.
+MogulAS
+---
 
-Built with Flash Builder 4.5.
+MogulAS is an ActionScript library that attempts to stay stylistically consistent with MogulCSS, MogulJS, and MogulMVC.
+
+Author
+---
+Alan James: [alanjames1987@gmail.com](mailto:alanjames1987@gmail.com)
+
+License
+---
+Licensed under [MIT](http://mogulmvc.com/general/license).
